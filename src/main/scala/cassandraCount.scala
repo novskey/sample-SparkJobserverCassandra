@@ -1,10 +1,7 @@
-import _root_.spark.jobserver.{SparkJobValid, SparkJobInvalid, SparkJobValidation, SparkJob}
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkConf
+import _root_.spark.jobserver.{SparkJob, SparkJobValid, SparkJobValidation}
 import com.datastax.spark.connector._
-import com.typesafe.config.{Config, ConfigFactory}
-
-import scala.util.Try
+import com.typesafe.config.Config
+import org.apache.spark.SparkContext
 
 // all Jobserver jobs must implement the SparkJob trait
 object cassandraCount extends SparkJob {
